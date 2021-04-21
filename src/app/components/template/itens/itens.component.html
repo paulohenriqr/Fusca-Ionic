@@ -1,0 +1,21 @@
+
+   <section class="itens">
+    <div class="lista">
+        <h3>Lista de Produtos:</h3>
+    </div><!--lista-->
+
+
+        <div class="produtos">
+            <div  *ngFor="let item of itens" class="produto-uni">
+                <p>Códido: <span>{{item.codigo}}</span></p>
+                <p>Nome: <span>{{item.nome}}</span></p>
+                <p>Em estoque:<span>{{item.estoque}}</span></p>
+                <p>Preço: <span>{{item.preco}}</span></p>
+            </div><!--produto-uni-->
+
+
+    </div><!--produtos-->
+
+    
+
+</section><!--itens-->
