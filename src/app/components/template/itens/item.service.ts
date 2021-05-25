@@ -2,23 +2,22 @@ import { Injectable } from '@angular/core';
 import { Item } from './Item.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ItemService {
 
   private itens : Item[]
 
 
-  constructor() { 
+  constructor() {
     this.itens = [
-      new Item(1,"Pneu",22,40.503),
-      new Item(2,"Volante",30,40.530),
-      new Item(3,"Parabrisa",200,420.50),
-      new Item(4,"Fusca",222,140.50),
-      new Item(5,"Mobilete",222,140.50),
-      new Item(6,"Pedal",222,140.50),
-      new Item(7,"Corrente Dentada",222,140.50),
-      new Item(8,"banco",222,140.50)
+      new Item(1,"Volante",'Automotivo',180.53,30,'Fusca 1'),
+      new Item(2,"Pneu",'Automotivo',279.53,42,'Fusca 2'),
+      new Item(3,"Farol",'Automotivo',120.53,42,'Fusca 3'),
+      new Item(4,"Buzina",'Automotivo',30.53,30,'Fusca 2'),
+      new Item(5,"Alarme",'Automotivo',195.53,42,'Fusca 3'),
+      new Item(6,"Embragem",'Automotivo',240.53,42,'Fusca 1'),
+
     ]
   }
 
@@ -31,13 +30,11 @@ export class ItemService {
     return this.itens[i]
   }
 
-  addItem(codigo:number, nome:string, estoque:number, preco:number){
-    this.itens.push(new Item(codigo,nome,estoque,preco))
-  }
 
-  editItem(i:number, item:Item){
-    this.itens[i] = item;
-  }
+
+
 
 
 }
+
+

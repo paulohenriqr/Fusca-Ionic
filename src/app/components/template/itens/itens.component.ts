@@ -1,6 +1,10 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { Item } from './Item.model';
 import { ItemService } from './item.service';
+
+
 
 
 @Component({
@@ -13,14 +17,25 @@ export class ItensComponent implements OnInit {
 
 
   itens: Item[]
+  textoBuscar = '';
 
   constructor(private itemService : ItemService) {
-    this.itens = itemService.getItens();
+
+
+    this.itens = this.itemService.getItens();
+
 
    }
 
+   buscarUsuario( event:any ){
+     const texto = event.target.value;
+     this.textoBuscar = texto;
+  }
+
   ngOnInit(): void {
-   
+
+
+
   }
 
 
